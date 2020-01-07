@@ -30,11 +30,26 @@ import (
 const appName = "camel"
 
 var (
-  ModuleBasics    module.BasicManager
+  // NewBasicManager is in charge of setting up basic module elemnets
+  ModuleBasics = module.NewBasicManager(
+    genaccounts.AppModuleBasic{},
+    genutil.AppModuleBasic{},
+    auth.AppModuleBasic{},
+    bank.AppModuleBasic{},
+    staking.AppModuleBasic{},
+    distr.AppModuleBasic{},
+    params.AppModuleBasic{},
+    slashing.AppModuleBasic{},
+    supply.AppModuleBasic{},
+  )
+
   DefaultCLIHome  = os.ExpandEnv("$HOME/.camelcli")
   DefaultNodeHome = os.ExpandEnv("$HOME/.cameld")
   maccPerms       = map[string][]string{
-    auth.FeeCollectorName: nil,
+    auth.FeeCollectorName:     nil,
+    distr.ModuleName:          nil,
+    staking.BondedPoolName:    {supply.Burner, supply.Staking},
+    staking.NotBondedPoolName: {supply.Burner, supply.Staking},
   }
 )
 
