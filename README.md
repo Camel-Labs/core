@@ -52,3 +52,19 @@ and to make sure your genesis file is correct, run:
 You can now start `cameld` by calling `cameld start`. You will see logs begin streaming that represent blocks being produced, this will take a couple of seconds.
 
 You have run your first node successfully.
+
+
+```bash
+$ cameld start
+I[2020-01-07|18:35:04.112] starting ABCI with Tendermint                module=main
+I[2020-01-07|18:35:09.401] Executed block                               module=state height=2 validTxs=0 invalidTxs=0
+I[2020-01-07|18:35:09.407] Committed state                              module=state height=2 txs=0 appHash=72DDF95C42DA6E81CBC62F61DB289CAE2F9748FC1979846B1A1DC77391FA4497
+I[2020-01-07|18:35:14.445] Executed block                               module=state height=3 validTxs=0 invalidTxs=0
+I[2020-01-07|18:35:14.451] Committed state                              module=state height=3 txs=0 appHash=E453A39602DF94B4966AD934D278EA52AD5D0ADB8CAD5C864C94E02661F82D50
+I[2020-01-07|18:35:19.490] Executed block                               module=state height=4 validTxs=0 invalidTxs=0
+I[2020-01-07|18:35:19.496] Committed state                              module=state height=4 txs=0 appHash=F106451D15B81D1D30642357403FF430D7E393FC23C797C099556536F6DFB545
+I[2020-01-07|18:35:24.531] Executed block                               module=state height=5 validTxs=0 invalidTxs=0
+I[2020-01-07|18:35:24.537] Committed state                              module=state height=5 txs=0 appHash=55B52267CAE0F334BFD4EC561080B6557810FC9935483D582F7A2B8A44D53739
+I[2020-01-07|18:35:29.572] Executed block                               module=state height=6 validTxs=0 invalidTxs=0
+...and watch the blocks roll by!
+```
