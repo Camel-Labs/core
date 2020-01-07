@@ -45,6 +45,7 @@ var (
 
   DefaultCLIHome  = os.ExpandEnv("$HOME/.camelcli")
   DefaultNodeHome = os.ExpandEnv("$HOME/.cameld")
+
   maccPerms       = map[string][]string{
     auth.FeeCollectorName:     nil,
     distr.ModuleName:          nil,
